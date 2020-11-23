@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoberturaChorizo.cs" />
+    <Compile Include="CoberturaJamon.cs" />
+    <Compile Include="CoberturaPinia.cs" />
+    <Compile Include="ICobertura.cs" />
+    <Compile Include="Pizza.cs" />
+    <Compile Include="PizzaBuilder.cs" />
+    <Compile Include="PrecioCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

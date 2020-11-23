@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace pedidoPizza
 {
-    class CoberturaPinia
+    class CoberturaPinia : ICobertura
     {
+        public double precio { get; set; }
+        public string detalle { get; set; }
+
+        public string getDetalle()
+        {
+            throw new NotImplementedException();
+        }
+
+        public double getPrecio()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

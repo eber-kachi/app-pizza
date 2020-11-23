@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pedidoPizza
 {
-    class PrecioCalculator
+   public class PrecioCalculator
     {
     }
 }
