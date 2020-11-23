@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace pedidoPizza
 {
-    class Program
+    class CoberturaPinia
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }

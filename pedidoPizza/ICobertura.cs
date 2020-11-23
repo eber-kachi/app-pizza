@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace pedidoPizza
 {
-    class Program
+    public interface ICobertura
     {
-        static void Main(string[] args)
-        {
+        string getDetalle();
 
-        }
+        double getPrecio();
+
     }
 }
