@@ -17,12 +17,20 @@ namespace pedidoPizza
             this.precio = precio;
         }
 
-        public void setCobertura(List<ICobertura> coberturas) {
+        public void setCoberturas(List<ICobertura> coberturas) {
             this.coberturas = coberturas;
         }
 
         public void setPrecio(double precio) {
             this.precio = precio;
+        }
+        public double getPrecio()
+        {
+            return this.precio;
+        }
+        public List<ICobertura> getCoberturas()
+        {
+            return this.coberturas;
         }
 
         public string print() {

@@ -15,7 +15,7 @@ namespace pedidoPizza
 
         public override void buildCobertura(List<ICobertura> coberturas)
         {
-            pizza.setCobertura(coberturas);
+            pizza.setCoberturas(coberturas);
         }
     }
 }

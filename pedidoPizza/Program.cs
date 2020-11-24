@@ -10,6 +10,7 @@ namespace pedidoPizza
     {
         static void Main(string[] args)
         {
+            PrecioCalculator calculadora = new PrecioCalculator();
             ClienteDirector cliente = new ClienteDirector();
 
             int opcion;
@@ -52,14 +53,17 @@ namespace pedidoPizza
                         Console.WriteLine("Opcion no valida");
                         break;
                 }
-
-               
-
                 //cliente.construirPizza(coberturas);
 
                 //Console.WriteLine("Total de coberturas "+coberturas.Count);
+                Pizza pizza = cliente.getPizza();
+                calculadora.calculatePrecioPizza(cliente.getPizza());
+                Console.WriteLine(pizza.print());
 
             } while ( opcion !=4);
+
+
+
 
             Console.ReadKey();
 
@@ -79,26 +83,28 @@ namespace pedidoPizza
                 Console.WriteLine("4. Salir");
 
                 opcion = Convert.ToInt32(Console.ReadLine());
-
-                switch (opcion)
+                if(coberturas.Count <=6)
                 {
-                    case 1:
-                        // CoberturaChorizo chorizo = new CoberturaChorizo(23.4, "chorizo");
-                        coberturas.Add(new CoberturaChorizo(13.4, "chorizo"));
-                        break;
-                    case 2:
-                        coberturas.Add(new CoberturaJamon(10.4, "Jamon"));
-                        break;
-                    case 3:
-                        coberturas.Add(new CoberturaPinia(15.4, "pinia"));
-                        break;
-                    default:
-                        Console.WriteLine("Opcion no valida");
-                        break;
-                }
+                    switch (opcion)
+                    {
+                        case 1:
+                            // CoberturaChorizo chorizo = new CoberturaChorizo(23.4, "chorizo");
+                            coberturas.Add(new CoberturaChorizo(13.4, "chorizo"));
+                            break;
+                        case 2:
+                            coberturas.Add(new CoberturaJamon(10.4, "Jamon"));
+                            break;
+                        case 3:
+                            coberturas.Add(new CoberturaPinia(15.4, "pinia"));
+                            break;
+                        default:
+                            Console.WriteLine("Opcion no valida");
+                            break;
+                    }
+                }else
+                    Console.WriteLine("ya no puede escojer mas coberturas");
+            } while (opcion != 4 );
 
-
-            } while (opcion != 4 || coberturas.Count < 6);
             return coberturas;
         }
     }
