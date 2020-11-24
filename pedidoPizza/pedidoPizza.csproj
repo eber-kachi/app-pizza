@@ -50,6 +50,9 @@
     <Compile Include="ICobertura.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaBuilder.cs" />
+    <Compile Include="PizzaGrandeConcreteBuilder.cs" />
+    <Compile Include="PizzaMedianaConcreteBuilder.cs" />
+    <Compile Include="PizzaPequenaConcreteBuilder.cs" />
     <Compile Include="PrecioCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

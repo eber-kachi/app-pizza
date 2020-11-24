@@ -31,14 +31,22 @@ namespace pedidoPizza
 
                         // CoberturaChorizo chorizo = new CoberturaChorizo(23.4, "chorizo");
                         //coberturas.Add(new CoberturaChorizo(13.4, "chorizo"));
-                        //PizzaMedianaConcreteBuilder mediana = new
+                        PizzaGrandeConcreteBuilder grande = new PizzaGrandeConcreteBuilder();
+                        cliente.setPizzaBuilder(grande);
+                        cliente.construirPizza(agregarCoberturas());
 
                         break;
                     case 2:
                         //coberturas.Add(new CoberturaJamon(10.4, "Jamon"));
+                        PizzaMedianaConcreteBuilder mediana = new PizzaMedianaConcreteBuilder();
+                        
+                        cliente.setPizzaBuilder(mediana);
+                        cliente.construirPizza(agregarCoberturas());
                         break;
                     case 3:
-                       // coberturas.Add(new CoberturaPinia(15.4, "pinia"));
+                        // coberturas.Add(new CoberturaPinia(15.4, "pinia"));
+                        cliente.setPizzaBuilder(new PizzaPequenaConcreteBuilder());
+                        cliente.construirPizza(agregarCoberturas());
                         break;
                     default:
                         Console.WriteLine("Opcion no valida");
@@ -57,7 +65,7 @@ namespace pedidoPizza
 
         }
 
-        void agregarCoberturas()
+        static List<ICobertura> agregarCoberturas()
         {
             List<ICobertura> coberturas = new List<ICobertura>();
 
@@ -91,6 +99,7 @@ namespace pedidoPizza
 
 
             } while (opcion != 4 || coberturas.Count < 6);
+            return coberturas;
         }
     }
 }

@@ -11,13 +11,12 @@ namespace pedidoPizza
 
         protected override void buildTipoPizza()
         {
-
-            pizza.setPizza("Grande", 100);
+            pizza.setTipoPizza("Grande", 100);
         }
 
         public override void buildCobertura(List<ICobertura> coberturas)
         {
-            pizza.addCobertura(coberturas);
+            pizza.setCobertura(coberturas);
         }
     }
 }

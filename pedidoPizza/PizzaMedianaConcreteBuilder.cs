@@ -8,11 +8,14 @@ namespace pedidoPizza
 {
    public class PizzaMedianaConcreteBuilder : PizzaBuilder
    {
-        public void buildTipoPizza() {
-            pizza.setPizza("Mediana",75);
+        protected override void buildTipoPizza()
+        {
+            pizza.setTipoPizza("Mediana", 75);
         }
-        public void buildCobertura(List coberturas){
-            pizza.addCobertura(coberturas);
+
+        public override void buildCobertura(List<ICobertura> coberturas)
+        {
+            pizza.setCobertura(coberturas);
         }
     }
 }
