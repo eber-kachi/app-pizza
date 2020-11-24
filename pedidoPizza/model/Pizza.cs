@@ -41,7 +41,7 @@ namespace pedidoPizza
 
             foreach (var cobertura in coberturas)
             {
-              res += "\t" + cobertura + "\n";
+              res += "\t" + cobertura.getDetalle() + "\n";
             }
             res+= "-------------------------\n" +"Precio de la Pizza: " + precio + "Bs.";
 
