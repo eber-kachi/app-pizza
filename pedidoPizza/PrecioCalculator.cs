@@ -8,5 +8,23 @@ namespace pedidoPizza
 {
    public class PrecioCalculator
     {
+        private double precioPizza;
+        
+        public void calculatePrecioPizza(Pizza pizza) {
+            precioPizza = pizza.getPrecio();
+            if (pizza.getCoberturas().lenght > 2)
+            {
+                int i = 1;
+                foreach (var cobertura in pizza.getCoberturas())
+                {
+                    if (i > 2)
+                    {
+                        precioPizza += cobertura.getPrecio(); 
+                    }
+                    i++;
+                }
+            }
+            pizza.setPrecio(precioPizza);
+        }
     }
 }

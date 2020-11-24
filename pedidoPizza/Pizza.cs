@@ -12,8 +12,9 @@ namespace pedidoPizza
         private List<ICobertura> coberturas { get; set; }
         private double precio { get; set; }
 
-        public void setTipoPizza(string tipoPizza) {
+        public void setTipoPizza(string tipoPizza, double precio) {
             this.tipoPizza = tipoPizza;
+            this.precio = precio;
         }
 
         public void setCobertura(List<ICobertura> coberturas) {

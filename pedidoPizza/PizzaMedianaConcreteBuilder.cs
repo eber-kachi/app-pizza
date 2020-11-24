@@ -9,7 +9,7 @@ namespace pedidoPizza
    public class PizzaMedianaConcreteBuilder : PizzaBuilder
    {
         public void buildTipoPizza() {
-            pizza.setPizza("Mediana");
+            pizza.setPizza("Mediana",75);
         }
         public void buildCobertura(List coberturas){
             pizza.addCobertura(coberturas);
