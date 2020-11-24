@@ -16,6 +16,6 @@ namespace pedidoPizza
         }
 
         protected abstract void buildTipoPizza();
-        protected abstract void buildCobertura(Array coberturas);
+        public abstract void buildCobertura(Array coberturas);
     }
 }
