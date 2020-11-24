@@ -54,7 +54,7 @@
     <Compile Include="PizzaMedianaConcreteBuilder.cs" />
     <Compile Include="PizzaPequenaConcreteBuilder.cs" />
     <Compile Include="PrecioCalculator.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="view\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
