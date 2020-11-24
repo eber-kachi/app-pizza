@@ -10,7 +10,15 @@ namespace pedidoPizza
    {
         private Pizza pizza { get; set; }
         public PrecioCalculator precioCalculator { get; set; }
-        //trabajando 
+        
+        public Pizza getPizza() {
+            return pizza;
+        }
+        public void createNuevaPizza(){
+            pizza = new Pizza();
+        }
 
+        protected abstract void buildTipoPizza();
+        protected abstract void buildCobertura(array coberturas);
     }
 }
