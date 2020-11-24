@@ -8,7 +8,7 @@ namespace pedidoPizza
 {
    public abstract class PizzaBuilder
    {
-        private Pizza pizza { get; set; }
+        protected Pizza pizza { get; set; }
         public PrecioCalculator precioCalculator { get; set; }
         
         public void createNuevaPizza(){
@@ -16,6 +16,6 @@ namespace pedidoPizza
         }
 
         protected abstract void buildTipoPizza();
-        public abstract void buildCobertura(Array coberturas);
+        public abstract void buildCobertura(List<ICobertura> coberturas);
     }
 }

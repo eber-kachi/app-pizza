@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pedidoPizza
 {
-    class Pizza
+    public class Pizza
     {
         private string tipoPizza { get; set; }
         private List<ICobertura> coberturas { get; set; }

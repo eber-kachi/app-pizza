@@ -19,12 +19,13 @@ namespace pedidoPizza
             this.pizzaBuilder = pizzaBuilder;
         }
 
-        public void construirPizza( Array coberturas )
+        public void construirPizza(List<ICobertura> coberturas)
         {
             this.pizzaBuilder.createNuevaPizza();
             this.pizzaBuilder.buildCobertura(coberturas);
 
         }
 
+      
     }
 }
