@@ -24,46 +24,32 @@ namespace pedidoPizza
                 Console.WriteLine("4. Salir");
 
                 opcion = Convert.ToInt32(Console.ReadLine());
-                //Console.WriteLine(opcion);
 
                 switch (opcion)
                 {
                     case 1:
 
-                        // CoberturaChorizo chorizo = new CoberturaChorizo(23.4, "chorizo");
-                        //coberturas.Add(new CoberturaChorizo(13.4, "chorizo"));
-                        PizzaGrandeConcreteBuilder grande = new PizzaGrandeConcreteBuilder();
-                        cliente.setPizzaBuilder(grande);
-                        cliente.construirPizza(agregarCoberturas());
-
+                        cliente.setPizzaBuilder(new PizzaGrandeConcreteBuilder());
                         break;
                     case 2:
-                        //coberturas.Add(new CoberturaJamon(10.4, "Jamon"));
-                        PizzaMedianaConcreteBuilder mediana = new PizzaMedianaConcreteBuilder();
                         
-                        cliente.setPizzaBuilder(mediana);
-                        cliente.construirPizza(agregarCoberturas());
+                        cliente.setPizzaBuilder(new PizzaMedianaConcreteBuilder());
                         break;
                     case 3:
-                        // coberturas.Add(new CoberturaPinia(15.4, "pinia"));
+
                         cliente.setPizzaBuilder(new PizzaPequenaConcreteBuilder());
-                        cliente.construirPizza(agregarCoberturas());
                         break;
                     default:
                         Console.WriteLine("Opcion no valida");
                         break;
                 }
-                //cliente.construirPizza(coberturas);
 
-                //Console.WriteLine("Total de coberturas "+coberturas.Count);
+                cliente.construirPizza(agregarCoberturas());
                 Pizza pizza = cliente.getPizza();
                 calculadora.calculatePrecioPizza(cliente.getPizza());
                 Console.WriteLine(pizza.print());
 
             } while ( opcion !=4);
-
-
-
 
             Console.ReadKey();
 
