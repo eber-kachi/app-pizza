@@ -20,7 +20,7 @@ namespace pedidoPizza
                 Console.WriteLine("\n==== Tipos de pizza ====");
                 Console.WriteLine("1. Grande");
                 Console.WriteLine("2. Mediana");
-                Console.WriteLine("3. pequenia");
+                Console.WriteLine("3. Pequenia");
                 Console.WriteLine("4. Salir");
 
                 opcion = Convert.ToInt32(Console.ReadLine());
@@ -64,7 +64,7 @@ namespace pedidoPizza
             {
                 Console.WriteLine("\n==== Selecciona coberturas para pizza ====");
                 Console.WriteLine("1. Chorizo");
-                Console.WriteLine("2. jamon");
+                Console.WriteLine("2. Jamon");
                 Console.WriteLine("3. Pinia");
                 Console.WriteLine("4. Salir");
 
@@ -75,20 +75,20 @@ namespace pedidoPizza
                     {
                         case 1:
                             // CoberturaChorizo chorizo = new CoberturaChorizo(23.4, "chorizo");
-                            coberturas.Add(new CoberturaChorizo(13.4, "chorizo"));
+                            coberturas.Add(new CoberturaChorizo(13.4, "Chorizo en rodajas"));
                             break;
                         case 2:
-                            coberturas.Add(new CoberturaJamon(10.4, "Jamon"));
+                            coberturas.Add(new CoberturaJamon(10.4, "Jamon picado"));
                             break;
                         case 3:
-                            coberturas.Add(new CoberturaPinia(15.4, "pinia"));
+                            coberturas.Add(new CoberturaPinia(15.4, "Pinia en pedazos"));
                             break;
                         default:
                             Console.WriteLine("Opcion no valida");
                             break;
                     }
                 }else
-                    Console.WriteLine("ya no puede escojer mas coberturas");
+                    Console.WriteLine("Ya no puede escojer mas coberturas");
             } while (opcion != 4 );
 
             return coberturas;
