@@ -20,7 +20,7 @@ namespace pedidoPizza
             return this.pizza;
         }
 
-        protected abstract void buildTipoPizza();
+        public abstract void buildTipoPizza();
         public abstract void buildCobertura(List<ICobertura> coberturas);
     }
 }

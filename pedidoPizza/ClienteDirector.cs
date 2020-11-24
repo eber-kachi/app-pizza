@@ -26,6 +26,7 @@ namespace pedidoPizza
         public void construirPizza(List<ICobertura> coberturas)
         {
             this.pizzaBuilder.createNuevaPizza();
+            this.pizzaBuilder.buildTipoPizza();
             this.pizzaBuilder.buildCobertura(coberturas);
 
         }

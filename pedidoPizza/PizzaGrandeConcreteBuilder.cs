@@ -9,7 +9,7 @@ namespace pedidoPizza
     class PizzaGrandeConcreteBuilder: PizzaBuilder
     {
 
-        protected override void buildTipoPizza()
+        public override void buildTipoPizza()
         {
             pizza.setTipoPizza("Grande", 100);
         }
