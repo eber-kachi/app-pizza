@@ -10,6 +10,16 @@ namespace pedidoPizza
     {
         static void Main(string[] args)
         {
+            ClienteDirector cliente = new ClienteDirector();
+
+
+            do
+            {
+
+
+
+
+            } while (true);
 
         }
     }
