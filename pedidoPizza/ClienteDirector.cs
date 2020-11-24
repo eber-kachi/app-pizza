@@ -14,12 +14,12 @@ namespace pedidoPizza
 
         }
 
-        public void setPizza(PizzaBuilder pizza)
+        public void setPizzaBuilder(PizzaBuilder pizzaBuilder)
         {
-            this.pizzaBuilder = pizza;
+            this.pizzaBuilder = pizzaBuilder;
         }
 
-        public void contruirPizza( Array coberturas )
+        public void construirPizza( Array coberturas )
         {
             this.pizzaBuilder.createNuevaPizza();
             this.pizzaBuilder.buildCobertura(coberturas);
