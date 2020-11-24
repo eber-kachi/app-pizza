@@ -8,11 +8,14 @@ namespace pedidoPizza
 {
     class PizzaGrandeConcreteBuilder: PizzaBuilder
     {
-        public void buildTipoPizza()
+
+        protected override void buildTipoPizza()
         {
-            pizza.setPizza("Grande");
+
+            pizza.setPizza("Grande", 100);
         }
-        public void buildCobertura(List coberturas)
+
+        public override void buildCobertura(List<ICobertura> coberturas)
         {
             pizza.addCobertura(coberturas);
         }

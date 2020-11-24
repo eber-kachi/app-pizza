@@ -31,7 +31,7 @@ namespace pedidoPizza
 
                         // CoberturaChorizo chorizo = new CoberturaChorizo(23.4, "chorizo");
                         //coberturas.Add(new CoberturaChorizo(13.4, "chorizo"));
-                        PizzaMedianaConcreteBuilder mediana = new
+                        //PizzaMedianaConcreteBuilder mediana = new
 
                         break;
                     case 2:
@@ -47,9 +47,9 @@ namespace pedidoPizza
 
                
 
-                cliente.construirPizza(coberturas);
+                //cliente.construirPizza(coberturas);
 
-                Console.WriteLine("Total de coberturas "+coberturas.Count);
+                //Console.WriteLine("Total de coberturas "+coberturas.Count);
 
             } while ( opcion !=4);
 
