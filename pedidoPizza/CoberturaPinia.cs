@@ -8,17 +8,21 @@ namespace pedidoPizza
 {
     class CoberturaPinia : ICobertura
     {
-        public double precio { get; set; }
-        public string detalle { get; set; }
-
+        private double precio { get; set; }
+        private string detalle { get; set; }
+        public CoberturaPinia(double precio, string detalle)
+        {
+            this.precio = precio;
+            this.detalle = detalle;
+        }
         public string getDetalle()
         {
-            throw new NotImplementedException();
+            return this.detalle;
         }
 
         public double getPrecio()
         {
-            throw new NotImplementedException();
+            return this.precio;
         }
     }
 }
