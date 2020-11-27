@@ -9,6 +9,7 @@ namespace pedidoPizza
    public class PrecioCalculator
     {
         private double precioPizza;
+        private double precioPedido;
         
         public void calculatePrecioPizza(Pizza pizza) {
             precioPizza = pizza.getPrecio();
@@ -24,7 +25,15 @@ namespace pedidoPizza
                     i++;
                 }
             }
-            pizza.setPrecio(precioPizza);
+            pizza.setPrecio(Math.Round(precioPizza,2));
+        }
+
+        public void calculatePrecioPedido(Pedido pedido) {
+            foreach (var pizza in pedido.getPedido())
+            {
+                precioPedido += pizza.getPrecio();
+            }
+            pedido.setPrecioTotalPedido(precioPedido);
         }
     }
 }
