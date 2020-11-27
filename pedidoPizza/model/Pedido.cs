@@ -44,7 +44,7 @@ namespace pedidoPizza
                 res+= "-------------------------\n" +"Precio individual de la Pizza: " + pizza.getPrecio() + "Bs.\n";
                 num++;
             }
-            res += "\n********* Precio total del pedido: " + precioTotalPedido + " *********\n";
+            res += "\n********* Precio total del pedido: " + precioTotalPedido + "Bs. *********\n";
 
             return res;
         }
