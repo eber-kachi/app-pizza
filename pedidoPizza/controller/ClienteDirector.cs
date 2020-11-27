@@ -8,10 +8,22 @@ namespace pedidoPizza
 {
     public class ClienteDirector
     {
+        private string nombre { get; set; }
+        private string ubicacion { get; set; }
+        private Delivery delivery { get; set; }
         private PizzaBuilder pizzaBuilder { get; set; }
-        public ClienteDirector()
+        public ClienteDirector(string nombre, string ubicacion)
         {
+            this.nombre = nombre;
+            this.ubicacion = ubicacion;
+        }
 
+        public void setDelivery(Delivery delivery) {
+            this.delivery = delivery;
+        }
+
+        public string getUbicacion() {
+            return this.ubicacion;
         }
 
         public void setPizzaBuilder(PizzaBuilder pizzaBuilder)
@@ -28,9 +40,10 @@ namespace pedidoPizza
             this.pizzaBuilder.createNuevaPizza();
             this.pizzaBuilder.buildTipoPizza();
             this.pizzaBuilder.buildCobertura(coberturas);
-
         }
-
-      
+    
+        public void notificar() {
+            System.Console.WriteLine("Pedido de: " + nombre + delivery.getUltimaPosicion());
+        }
     }
 }

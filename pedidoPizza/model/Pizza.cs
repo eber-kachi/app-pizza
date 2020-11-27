@@ -37,7 +37,7 @@ namespace pedidoPizza
 
             string res = "";
 
-            res += "Tamano de la Pizza: " + tipoPizza + "\n" + "Coberturas: ";
+            res += "Tamano de la Pizza: " + tipoPizza + "\n" + "Coberturas: \n";
 
             foreach (var cobertura in coberturas)
             {
